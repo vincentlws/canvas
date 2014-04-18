@@ -1,22 +1,170 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
-<head></head>
-<style type="text/css">
-	#canvas {
-		position: absolute;
-		left: 0px;
-		top: 20px;
-		margin: 20px;
-		background: #ffffff;
-		border: thin inset rgba(100, 150, 230, 0.5);
-		cursor: pointer;
-	}
-	
-</style>
+<head>
+<link rel="stylesheet" type="text/css" href="../../css/main.css">
+</head>
 <body>
 <canvas id="canvas" width="500" height="500"></canvas>
+<br>
+<br>
+<div id="content">
+	新使用到的api(转载w3school):<br>
+	1，beginPath()：方法开始一条路径，或重置当前的路径。<br><br>
 
+	2，arc(x,y,r,sAngle,eAngle,counterclockwise)
+
+
+<table class="dataTable">
+	<tbody><tr>
+	<th style="width:25%;">参数</th>
+	<th>描述</th>
+	</tr>
+
+	<tr>
+	<td><i>x</i></td>
+	<td>圆的中心的 x 坐标。</td>
+	</tr>
+
+	<tr>
+	<td><i>y</i></td>
+	<td>圆的中心的 y 坐标。</td>
+	</tr>
+
+	<tr>
+	<td><i>r</i></td>
+	<td>圆的半径。</td>
+	</tr>
+
+	<tr>
+	<td><i>sAngle</i></td>
+	<td>起始角，以弧度计。（弧的圆形的三点钟位置是 0 度）。</td>
+	</tr>
+
+	<tr>
+	<td><i>eAngle</i></td>
+	<td>结束角，以弧度计。</td>
+	</tr>
+
+	<tr>
+	<td><i>counterclockwise</i></td>
+	<td>可选。规定应该逆时针还是顺时针绘图。False = 顺时针，true = 逆时针。</td>
+	</tr>
+	</tbody>
+</table>
+
+<br><br>
+	3，stroke()：方法会实际地绘制出通过 moveTo() 和 lineTo() 方法定义的路径。默认颜色是黑色。
+<br><br>
+	4，measureText(text).width：方法返回包含一个对象，该对象包含以像素计的指定字体宽度。
+	<table class="dataTable">
+	<tbody><tr>
+	<th style="width:25%;">参数</th>
+	<th>描述</th>
+	</tr>
+
+	<tr>
+	<td><i>text</i></td>
+	<td>文本</td>
+	</tr>
+	
+	</tbody>
+</table>
+<br><br>
+	5，fillText(text,x,y,maxWidth);
+	<table class="dataTable">
+	<tbody><tr>
+	<th style="width:25%;">参数</th>
+	<th>描述</th>
+	</tr>
+
+	<tr>
+	<td><i>text</i></td>
+	<td>规定在画布上输出的文本。</td>
+	</tr>
+
+	<tr>
+	<td><i>x</i></td>
+	<td>开始绘制文本的 x 坐标位置（相对于画布）。</td>
+	</tr>
+
+	<tr>
+	<td><i>y</i></td>
+	<td>开始绘制文本的 y 坐标位置（相对于画布）。</td>
+	</tr>
+
+	<tr>
+	<td><i>maxWidth</i></td>
+	<td>可选。允许的最大文本宽度，以像素计。</td>
+	</tr>
+	</tbody></table>
+	<br></br>
+	6，fill(): 方法填充当前的图像（路径）。默认颜色是黑色。
+	<br></br>
+	7，moveTo(x,y): 移动圆心到x,y位置
+	<table class="dataTable">
+		<tbody><tr>
+		<th style="width:25%;">参数</th>
+		<th>描述</th>
+		</tr>
+
+		<tr>
+		<td><i>x</i></td>
+		<td>路径的目标位置的 x 坐标</td>
+		</tr>
+
+		<tr>
+		<td><i>y</i></td>
+		<td>路径的目标位置的 y 坐标</td>
+		</tr>
+		</tbody></table>
+	<br><br>
+	8，lineTo(x, y)： 方法添加一个新点，然后创建从该点到画布中最后指定点的线条（该方法并不会创建线条）。
+	<table class="dataTable">
+		<tbody><tr>
+		<th style="width:25%;">参数</th>
+		<th>描述</th>
+		</tr>
+
+		<tr>
+		<td><i>x</i></td>
+		<td>路径的目标位置的 x 坐标</td>
+		</tr>
+
+		<tr>
+		<td><i>y</i></td>
+		<td>路径的目标位置的 x 坐标</td>
+		</tr>
+		</tbody></table>
+	<br><br>
+	9，clearRect(x,y,width,height)：方法清空给定矩形内的指定像素。
+	<table class="dataTable">
+		<tbody><tr>
+		<th style="width:25%;">参数</th>
+		<th>描述</th>
+		</tr>
+
+		<tr>
+		<td><i>x</i></td>
+		<td>要清除的矩形左上角的 x 坐标</td>
+		</tr>
+
+		<tr>
+		<td><i>y</i></td>
+		<td>要清除的矩形左上角的 y 坐标</td>
+		</tr>
+
+		<tr>
+		<td><i>width</i></td>
+		<td>要清除的矩形的宽度，以像素计</td>
+		</tr>
+
+		<tr>
+		<td><i>height</i></td>
+		<td>要清除的矩形的高度，以像素计</td>
+		</tr>
+		</tbody></table>
+</div>
 </body>
 <script src="clock.js"></script>
 </html>
