@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<link rel="stylesheet" type="text/css" href="../../css/main.css">
+<style type="text/css">
+	body{
+		background: rgba(100, 145, 250, 0.3);
+	}
+
+	#canvas {
+		margin-left: 20px;
+		margin-right: 0;
+		margin-bottom: 20px;
+		border: thin solid #aaaaaa;
+		cursor: crosshair;
+		padding: 0;
+	}
+
+	#controls{
+		margin: 20px 0px 20px 20px;
+	}
+
+	#rubberbandDiv {
+		position: absolute;
+		border: 3px solid blue;
+		cursor: crosshair;
+		display: none;
+	}
+</style>
+</head>
+<body>
+	<div id="controls">
+		<input type="button" id="resetButton" value="reset"/>
+	</div>
+	<div id="rubberbandDiv"></div>
+	<canvas id="canvas" width="800" height="520"></canvas>
+<br>
+<br>
+<div id="content">
+	新使用到的api(转载w3school):<br>
+	1，canvas.getBoundingClientRect(): 获得页面中某个元素的左，上，右和下分别相对浏览器视窗的位置<br><br>
+
+	2，context.drawImage(img,x,y);<br>
+	&nbsp;&nbsp;&nbsp;context.drawImage(img,x,y,width,height);<br>
+	&nbsp;&nbsp;&nbsp;context.drawImage(img,sx,sy,swidth,sheight,x,y,width,height);<br><br>
+	<table class="dataTable">
+<tbody><tr>
+<th style="width:25%;">参数</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td><i>img</i></td>
+<td>规定要使用的图像、画布或视频。</td>
+</tr>
+
+<tr>
+<td><i>sx</i></td>
+<td>可选。开始剪切的 x 坐标位置。</td>
+</tr>
+
+<tr>
+<td><i>sy</i></td>
+<td>可选。开始剪切的 y 坐标位置。</td>
+</tr>
+
+<tr>
+<td><i>swidth</i></td>
+<td>可选。被剪切图像的宽度。</td>
+</tr>
+
+<tr>
+<td><i>sheight</i></td>
+<td>可选。被剪切图像的高度。</td>
+</tr>
+
+<tr>
+<td><i>x</i></td>
+<td>在画布上放置图像的 x 坐标位置。</td>
+</tr>
+
+<tr>
+<td><i>y</i></td>
+<td>在画布上放置图像的 y 坐标位置。</td>
+</tr>
+
+<tr>
+<td><i>width</i></td>
+<td>可选。要使用的图像的宽度。（伸展或缩小图像）</td>
+</tr>
+
+<tr>
+<td><i>height</i></td>
+<td>可选。要使用的图像的高度。（伸展或缩小图像）</td>
+</tr>
+
+</tbody></table>
+</div>
+</body>
+<script src="rubber.js"></script>
+</html>
